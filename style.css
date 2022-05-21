@@ -92,7 +92,7 @@ h6 {
 
 @media screen and (min-width: 768px) {
   .header {
-    background-image: url(/images/japan-bg.jpg);
+    background-image: url(images/japan-bg.jpg);
     background-repeat: no-repeat;
     background-position: top 75px left 0px;
     background-size: cover;
@@ -175,7 +175,7 @@ h6 {
   height: 100vh;
   padding: 2rem 0;
   background: var(--ochre-color);
-  background-image: url(./images/menu-bg.jpg);
+  background-image: url(images/menu-bg.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
