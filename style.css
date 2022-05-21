@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
 /* custom properties */
 
 :root {
   --font: "Poppins", sans-serif;
+  --title-font: "Macondo", cursive;
   --white-color: #fff;
   --red-color: #dc143c;
   --green-color: #2c5f2d;
+  --brown-color: #5f442a;
+  --ochre-color: #fcece3;
 }
 
 /* Default css */
@@ -27,7 +30,6 @@ html {
 
 body {
   font-family: var(--font);
-  min-height: 100vh;
   font-size: 2rem;
   font-weight: 400;
 }
@@ -46,22 +48,66 @@ img {
   height: auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 3rem;
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* header section */
-
 .section {
   padding: 1rem 0;
+}
+
+.btn {
+  background-color: var(--green-color);
+  color: var(--white-color);
+  font-family: var(--font);
+  border: none;
+  border-radius: 3.2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--red-color);
+}
+
+/* header section */
+
+.header {
+  background-color: var(--ochre-color);
+  min-height: 100vh;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    background-image: url(/images/japan-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top 75px left 0px;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+  }
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .desktop-logo {
@@ -92,7 +138,7 @@ img {
 
 .desktop-link {
   padding: 0.5rem 1rem;
-  background-color: var(--green-color);
+  background-color: var(--brown-color);
   color: var(--white-color);
   margin: 0 1rem;
   border-radius: 0.5rem;
@@ -109,7 +155,7 @@ img {
 .menu-icon {
   color: var(--green-color);
   cursor: pointer;
-  width: 25px;
+  width: 2.5rem;
   text-align: center;
 }
 
@@ -124,10 +170,15 @@ img {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 999;
   width: 25rem;
   height: 100vh;
   padding: 2rem 0;
-  background: var(--white-color);
+  background: var(--ochre-color);
+  background-image: url(./images/menu-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
   text-align: center;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease-in-out;
@@ -137,16 +188,12 @@ img {
   transform: translateX(-30rem);
 }
 
-.mobile-logo {
-  background-color: var(--white-color);
-}
-
 .mobile-link {
   display: block;
   border-radius: 0;
   margin: 1rem 0;
   background: none;
-  color: var(--green-color);
+  color: var(--brown-color);
   font-weight: 600;
 }
 
@@ -155,5 +202,45 @@ img {
 }
 
 .mobile-link-active {
+  color: var(--red-color);
+}
+
+/* hero area */
+.hero-area {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-area {
+    width: 60%;
+  }
+}
+
+.hero-title {
+  color: var(--brown-color);
+  font-family: var(--title-font);
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 7rem;
+  }
+}
+
+.country {
   color: var(--red-color);
 }
