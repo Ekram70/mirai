@@ -10,6 +10,7 @@
   --green-color: #2c5f2d;
   --brown-color: #5f442a;
   --ochre-color: #fcece3;
+  --gray-color: #666;
 }
 
 /* Default css */
@@ -58,14 +59,21 @@ h6 {
   font-size: 3rem;
 }
 
+.section {
+  padding: 5rem 0;
+  overflow: visible;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 10rem 0;
+  }
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.section {
-  padding: 1rem 0;
 }
 
 .btn {
@@ -82,6 +90,7 @@ h6 {
 .btn:hover {
   background-color: var(--red-color);
 }
+
 /* preloader section */
 .preloader {
   background-color: var(--ochre-color);
@@ -104,19 +113,15 @@ h6 {
 
 .header {
   background-color: var(--ochre-color);
-  min-height: 100vh;
-  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    background-image: url(images/japan-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: top 75px left 0px;
-    background-size: cover;
-    padding: 0;
-    position: relative;
-  }
+.sticky {
+  background-color: #fff;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
@@ -125,7 +130,6 @@ h6 {
   align-items: center;
   max-width: 120rem;
   margin: 0 auto;
-  padding: 1rem 0;
 }
 
 .desktop-logo {
@@ -223,7 +227,24 @@ h6 {
   color: var(--red-color);
 }
 
-/* hero area */
+/* hero section */
+.hero {
+  background-color: var(--ochre-color);
+  min-height: calc(100vh - 77px);
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url(images/japan-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top 75px left 0px;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+  }
+}
+
 .hero-area {
   position: absolute;
   left: 50%;
@@ -244,11 +265,13 @@ h6 {
   color: var(--brown-color);
   font-family: var(--title-font);
   font-size: 4rem;
-  margin-bottom: 2rem;
+  width: 70%;
+  margin: 0 auto 2rem;
 }
 
 @media screen and (min-width: 768px) {
   .hero-title {
+    width: 100%;
     font-size: 6rem;
   }
 }
@@ -271,7 +294,91 @@ h6 {
 
 #snowfall {
   position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: calc(100% - 77px); /* 77px is the height of the container*/
+  height: calc(100vh - 77px);
   pointer-events: none;
+}
+
+/* why choose us section */
+.choose {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--gray-color);
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 576px) {
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subtitle {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .subtitle {
+    width: 40%;
+  }
+}
+
+.choose-boxes {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 576px) {
+  .choose-boxes {
+    width: 50%;
+    margin: 5rem auto 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .choose-boxes {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.choose-box {
+  margin: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .choose-box {
+    margin: 1.5rem;
+  }
+}
+
+.choose-icon {
+  border: 2px solid var(--red-color);
+  border-radius: 50%;
+  padding: 1rem;
+  width: 6rem;
+  margin-bottom: 2rem;
+}
+
+.choose-title {
+  font-size: 2rem;
+}
+
+.choose-desc {
+  font-size: 1.5rem;
+  color: var(--gray-color);
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="shortcut icon" href="" type="image/x-icon" /> -->
-    <!-- fontawesome -->
+    <!-- font-awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -19,7 +19,7 @@
       <i class="fa fa-spinner fa-pulse fa-2x spinner"></i>
     </div>
     <!-- header section starts -->
-    <header class="section header">
+    <header class="section header" id="sticky">
       <div class="container">
         <!-- navbar starts -->
         <nav class="navbar">
@@ -68,8 +68,13 @@
           </div>
         </nav>
         <!-- navbar ends -->
+      </div>
+    </header>
+    <!-- header section ends -->
 
-        <!-- hero section starts -->
+    <!-- hero section starts -->
+    <main class="section hero">
+      <div class="container">
         <div class="hero-area">
           <h1 class="hero-title">
             Door for the Most Beautiful Island
@@ -78,12 +83,63 @@
           <button class="btn">Learn More</button>
           <button class="btn">Watch Now</button>
         </div>
-        <!-- hero section ends -->
+        <div id="snowfall"></div>
       </div>
       <!-- particles -->
-      <div id="snowfall"></div>
-    </header>
-    <!-- header section ends -->
+    </main>
+    <!-- hero section ends -->
+
+    <!-- why choose us starts -->
+    <section class="section choose">
+      <div class="container">
+        <div class="heading">
+          <h3 class="title">Why Choose us?</h3>
+          <p class="subtitle">
+            Learn how to speak Japanese online with Certified Native Teachers in
+            Tokyo.
+          </p>
+        </div>
+        <div class="choose-boxes">
+          <div class="choose-box">
+            <img
+              src="images/method-icon.png"
+              alt="method icon"
+              class="choose-icon"
+            />
+            <h3 class="choose-title">The Ezoe Method</h3>
+            <p class="choose-desc">
+              We've developed a unique visual learning system, proven highly
+              effective for teaching Japanese to foreigners.
+            </p>
+          </div>
+          <div class="choose-box">
+            <img
+              src="images/institute-icon.png"
+              alt="method icon"
+              class="choose-icon"
+            />
+            <h3 class="choose-title">Recognized Institute</h3>
+            <p class="choose-desc">
+              100% certified and authorized by the Japanese Ministry of
+              Education and the Tokyo Metropolitan Government.
+            </p>
+          </div>
+          <div class="choose-box">
+            <img
+              src="images/experience-icon.png"
+              alt="method icon"
+              class="choose-icon"
+            />
+            <h3 class="choose-title">45 years experience</h3>
+            <p class="choose-desc">
+              Trusted by more than 10,000 students coming from more than 50
+              countries from around the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why choose us ends -->
 
     <!-- Custom Javascript -->
     <script src="script/particles.js"></script>
